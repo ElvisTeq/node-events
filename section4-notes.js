@@ -95,3 +95,38 @@
 // ------------------------------------------- .on('typeOfEvent', (req, res) => {})
 // => to handle servers using .on()
 // .on() => it takes a type of event, and then we can handle it
+
+////////////////////////////////////////////////////////////////////////
+
+// #6
+// Streams
+
+// Used to process (read and write) data piece by piece, without completing the whole read or write operation, and therefore without keeping all the data in memory
+// ex => newflix, youtube
+// is a more efficient way to handle data without saving the data, and we don't have to wait until all the data is available
+
+// **** Fundamental Type of Streams ****
+
+// Streams are instances of the EventEmitter class
+
+// ......Readable Streams
+// => Streams from which we can read (consume) data
+// ex => http request, file system(fs) read streams
+// has 'data' and 'end' event to handle
+// pipe() => function
+// read() => function
+
+// ......Writable Streams
+// => Stream to which we can write data
+// ex => http request, file system(fs) write streams
+// has "drain" and "finish" event
+// write() => function
+// and() => function
+
+// ......Duplex Streams
+// Streams that are both readable and writable
+// ex => new web socket
+
+// ......Transform Streams
+// Duplex streams that transform data as it is written on read
+// ex => zlib Gzip creation

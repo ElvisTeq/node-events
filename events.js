@@ -13,6 +13,8 @@ class Sales extends EventEmitter {
 // Create Event Emitter so we can handle it
 const myEmitter = new Sales();
 
+console.log(myEmitter);
+
 myEmitter.on("newSale", () => {
   console.log("There was a new sale!");
 });
