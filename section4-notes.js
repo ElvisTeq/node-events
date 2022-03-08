@@ -130,3 +130,32 @@
 // ......Transform Streams
 // Duplex streams that transform data as it is written on read
 // ex => zlib Gzip creation
+
+////////////////////////////////////////////////////////////////////////
+
+// #7
+// Streams in Practice
+
+// streams.js => File created
+
+// ------------------------------------ fs.createReadStream("test-file.txt");
+// => save it to a const
+// => to create a readable stream
+// => To receive the data live, instead of waiting for it to finish first
+
+// ----------------------------------- res.statusCode = 'errCode'
+// To handle the error code
+
+// ***** Back Pressure *****
+// => When response cannot send the data nearly as fast as receiving it from the file
+
+// ----------------------------------- .pipe(res)
+// => to handle back Pressure
+// Easiest way of consuming and writting streams
+// By using 'readable.pipe(res)' in out code it automatically .write(), and .end() our data
+// If we need to costumize our stream, we need to use Solution 2
+
+////////////////////////////////////////////////////////////////////////
+
+// #8
+// How requiring Modules Really Works
