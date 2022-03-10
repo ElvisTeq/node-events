@@ -157,5 +157,16 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-// #8
+// #8 #9
 // How requiring Modules Really Works
+
+// All our code is wrapped inside a function
+// => that's why we hace access to methods without creating them
+
+// -------------------------------- module.exports = 'function'
+// => to export one single value
+// 'test-module-1.js'
+
+// -------------------------------- exports.anything = 'anything'
+// => to export multiple values in one module
+// 'test-module-2.js'
